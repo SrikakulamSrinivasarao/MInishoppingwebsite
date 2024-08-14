@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Shopping Website</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        
+        <h1>Mini Shopping Website</h1>
+       <h2>Mini</h2>
+        <div id="cart">
+            <i class="fa fa-shopping-cart" style="font-size:34px"></i>
+            Cart: <span id="cart-items">0</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/jplif0w0/t-shirt/t/9/6/m-2475811-roadster-original-imafbt66gu4ch2ck.jpeg?q=70" height="250px" width="250px" alt="Item 1">
+            <h2>item</h2>
+            <p>Price:Rs. 799 <strike>999</strike></p>
+            <button class="add-to-cart" data-price="10">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/l/p/f/m-mens-lw-lycra-t-shirt-sti-original-imahyyzsjhzefbyh.jpeg?q=70" height="250px" width="250px" >
+            <h2>Item 2</h2>
+            <p>Price:Rs. 549 <strike>849</strike></p>
+            <button class="add-to-cart" data-price="549">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/1/h/6/xxl-ts39-vebnor-original-imagt928mhuyyfsc.jpeg?q=70" height="250px" width="250px" alt="Item 1">
+            <h2>Item 3</h2>
+            <p>Price: Rs.999 <strike>1100</strike></p>
+            <button class="add-to-cart" data-price="999">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/b/e/a/3xl-db1024-3bros-original-imagt7bymstzgeuu.jpeg?q=70" height="250px" width="250px" >
+            <h2>Item 4</h2>
+            <p>Price:Rs. 620</p>
+            <button class="add-to-cart" data-price="620">Add to Cart</button>
+        </div>
+
+        <!-- Add more items here -->
+    </div>
+    <div class="container">
+    <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/r/e/n/32-sp1183-sparky-original-imahfs33bjpwdn6h.jpeg?q=70" height="250px" width="250px">
+        <h2>Item 5</h2>
+        <p>Price: Rs.1220</p>
+        <button class="add-to-cart" data-price="1220">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/w/7/n/-original-imagu3gyhneh8t59.jpeg?q=70" height="250px" width="250px">
+        <h2>Item 6</h2>
+        <p>Price:Rs. 500</p>
+        <button class="add-to-cart" data-price="10">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/z/r/0/40-hpsjoggerball-black-urbano-fashion-original-imafu9hqvbuzxhgz-bb.jpeg?q=70" height="250px" width="250px">
+        <h2>Item 7</h2>
+        <p>Price:Rs. 1999</p>
+        <button class="add-to-cart" data-price="10">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jean/a/2/o/32-kjo-80147-sk-skft-gry-killer-original-imagzf3yeygy7bar.jpeg?q=70" height="250px" width="250px">
+        <h2>Item 8</h2>
+        <p>Price: Rs. 950</p>
+        <button class="add-to-cart" data-price="10">Add to Cart</button>
+    </div>
+
+
+</div>
+   <script href="">
+   let cartItemsCount = 0;
+let totalPrice = 0;
+
+document.addEventListener('click', function(event) 
+{
+  if (event.target.classList.contains('add-to-cart')) {
+    const price = parseFloat(event.target.dataset.price);
+    cartItemsCount++;
+    totalPrice += price; //totaPrice = totalPrice+price;
+
+    document.getElementById('cart-items').innerText = cartItemsCount;
+    alert("Item added to cart.Total Price:$" + totalPrice.toFixed(2));
+ }
+}); 
+</script>
+</body>
+
+</html>
